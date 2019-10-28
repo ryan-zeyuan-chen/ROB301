@@ -5,7 +5,6 @@ import time
 from geometry_msgs.msg import Twist
 from std_msgs.msg import String
 
-my_pi = 3.14159265
 actual = 0
 
 def callback(data):
@@ -29,13 +28,10 @@ def publisher_node1():
         error = desired - actual
         if error < 0:
             correction = -0.4
-            print('left')
         elif error > 0:
             correction = 0.4
-            print('right')
         else:
             correction = 0
-            print('middel')
         twist.linear.x = 0.1
         twist.angular.z = correction
         publisher.publish(twist)
