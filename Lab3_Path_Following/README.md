@@ -11,6 +11,9 @@ The objective of this exercise is to introduce the foundational concepts of cont
 
 The following commands should be run in separate terminal windows sequentially to properly start the ROS program:
 ```$roscore``` [Remote PC]
+
 ```$roslaunch turtlebot3_bringup turtlebot3_robot.launch``` [TurtleBot]
+
 ```$roslaunch turtlebot3_bringup turtlebot3_rpicamera.launch``` [TurtleBot]
+
 ```$rosrun sessionX lab3.py``` [Remote PC]
