@@ -12,4 +12,4 @@ The objective of this laboratory exercise is to familiarize with the equipment a
 The goal of this task is to command the wheel to go forward 1 m, then rotate 360◦and then stop. This is demonstrated in `l1_motor.py`.
 
 ## Task 2: Subscribe to 'odom'
-The goal of this task is to retrieve the current pose of the robot. This is demonstrated in 
+The goal of this task is to retrieve the current pose of the robot. This is demonstrated in `l1_odometry.py`.
