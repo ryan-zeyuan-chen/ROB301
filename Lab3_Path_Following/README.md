@@ -17,3 +17,6 @@ The following commands should be run in separate terminal windows sequentially t
 ```$roslaunch turtlebot3_bringup turtlebot3_rpicamera.launch``` [TurtleBot]
 
 ```$rosrun sessionX lab3.py``` [Remote PC]
+
+## Task 1: Bang-Bang Control
+With no knowledge of control theory, bang-bang control is often the first method considered in stabilizing a system.  As the name implies, the intent is to observe the environment for the  actual  state  of  the  system  and  move  toward  the  desired  state  with  maximal  control commands.
