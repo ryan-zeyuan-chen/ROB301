@@ -34,3 +34,4 @@ The value of k<sub>i</sub> can also be determined in multiple ways. Usually, the
 ## Task 4: Proportional-Integral-Derivative Control
 The final improvement to system tracking is the addition of the derivative gain, k<sub>d</sub>. This parameter is special in that it gives the system the ability to predict the future. By comparing the difference between the current error and the error of the previous timestep, a derivative gain will expose the rate of change of the error in order to damp the effect of the other two gains when nearing the target state. This is demonstrated in `publisher_node4()` of `lab3.py`.
 
+Usually, the values of k<sub>p</sub> and k<sub>i</sub> are determined first as discussed previously. Next, k<sub>d</sub> is slowly increased until there is no more improvement in tracking response. Too much k<sub>d</sub> and the system will result in excessive response.
