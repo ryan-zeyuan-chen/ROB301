@@ -29,4 +29,8 @@ The value of k<sub>p</sub> can be determined in multiple ways. If a mathematical
 ## Task 3: Proportional-Integral Control
 To improve the tracking of the system to the desired state, another element can be added to the correction calculation called the integral gain, k<sub>i</sub>. This parameter is special in that it gives the system memory. By accumulating the error over all timesteps, an integral gain will pull the response back to the target thus making the steady-state error zero. This is demonstrated in `publisher_node3()` of `lab3.py`.
 
-The value of k<sub>i</sub> can also be determined in multiple ways. Usually, the value of k<sub>p</sub> is determined first when k<sub>i</sub> is temporarily set to zero. Next, the integral gain is slowly increased until the steady-state error is adequately decreased. Too much k<sub>i</sub> and the system will be-come unstable
+The value of k<sub>i</sub> can also be determined in multiple ways. Usually, the value of k<sub>p</sub> is determined first when k<sub>i</sub> is temporarily set to zero. Next, the integral gain is slowly increased until the steady-state error is adequately decreased. Too much k<sub>i</sub> and the system will be-come unstable.
+
+## Task 4: Proportional-Integral-Derivative Control
+The final improvement to system tracking is the addition of the derivative gain, k<sub>d</sub>. This parameter is special in that it gives the system the ability to predict the future. By comparing the difference between the current error and the error of the previous timestep, a derivative gain will expose the rate of change of the error in order to damp the effect of the other two gains when nearing the target state. This is demonstrated in `publisher_node4()` of `lab3.py`.
+
