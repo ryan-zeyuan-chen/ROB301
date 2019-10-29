@@ -6,7 +6,7 @@ The objective of this laboratory exercise is to study feedforward or open-loop p
 * To study pose-to-pose control using waypoints with straight-line segments
 * To study pose-to-pose control using curved paths
 
-For the purposes of this lab, the robot can be modeled as an “unicycle,” whose pose is given by three degrees of freedom: x, y and θ, as measured in a global reference frame. In short, **x** = [x,y,θ].
+For the purposes of this lab, the robot can be modeled as an “unicycle,” whose pose is given by three degrees of freedom: x, y and θ, as measured in a global reference frame. In short, **x** = [x y θ] with x, y in units of cm and θ in degrees. 
 
 ## Task 1: Pose-to-Pose Locomotion Using a Straight-Line Path
-To demonstrate the basics of locomotion, the robot is commanded to move from a start pose x<sub>Start</sub> to a goal pose x<sub>Goal</sub>, with x<sub>Start</sub> = [0,0,0] and x<sub>Goal</sub> = [200 cm,50 cm,135]. The most direct way is to plan a straight-linepath from the start to the goal and have the robot follow it.
+To demonstrate the basics of locomotion, the robot is commanded to move from a start pose x<sub>Start</sub> to a goal pose **x**<sub>Goal</sub>, with **x**<sub>Start</sub> = [0 0 0] and x<sub>Goal</sub> = [200 50 135]. The most direct way is to plan a straight-linepath from the start to the goal and have the robot follow it.
