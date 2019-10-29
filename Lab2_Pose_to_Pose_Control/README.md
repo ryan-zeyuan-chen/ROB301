@@ -15,4 +15,4 @@ To demonstrate the basics of locomotion, the robot is commanded to move from a s
 In this demonstration, the robot is moved through a square path, defined by waypoints A, B, C, back to its original pose. That is, let **x**<sub>Start</sub> = [0 0 0], **x**<sub>A</sub> = [100 0 90], **x**<sub>B</sub> = [100 100 180], **x**<sub>C</sub> = [0 100 270] and **x**<sub>Goal</sub> = **x**<sub>Start</sub>. 
 
 ## Task 3: Pose-to-Pose Locomotion Along a Curved Path
-Unfortunately, some robots may not be capable of pivoting on the spot. In this case, it would be necessary to design a curved path for the robot tofollow. Assuming that the minimum turning radius for the robot is 25 cm, design a paththat will take it from start to goal as given in Task 1. This task is demonstrated in `lab2.py`. 
+Unfortunately, some robots may not be capable of pivoting on the spot. In this case, it would be necessary to design a curved path for the robot to follow. Assuming that the minimum turning radius for the robot is 25 cm, a path is designed that will take the robot from start to goal as given in Task 1. This task is demonstrated in `lab2.py`. 
