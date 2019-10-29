@@ -14,7 +14,7 @@ The following commands should be run in separate terminal windows sequentially t
 ```$roslaunch turtlebot3_bringup turtlebot3_robot.launch``` [TurtleBot]
 
 ## Task 1: Publish to 'cmd_vel' 
-The goal of this task is to command the wheel to go forward 1 m, then rotate 360◦and then stop. This is demonstrated in `l1_motor.py`.
+The goal of this task is to command the wheel to go forward 1 m, then rotate 360<sup>◦</sup> and then stop. This is demonstrated in `l1_motor.py`.
 
 ## Task 2: Subscribe to 'odom'
 The goal of this task is to retrieve the current pose of the robot. This is demonstrated in `l1_odometry.py`.
