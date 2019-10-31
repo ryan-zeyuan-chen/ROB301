@@ -18,12 +18,15 @@ The intended route for the robot consists of four addresses (and corresponding c
 To begin, the line-following control (from Lab 3) is applied. This ensures that the robot can smoothly follow the designated line provided in the test course.
 
 ## Task 2: Unfiltered Localization 
-The first demonstration is to localize the robot without the benefit of any filtering of sensor data. This will provide a baseline capability against which the benefits of Kalman filtering can be assessed. To accomplish this task, a starter code has been provided in `localizer.py`, which subscribes to the topic `/cmd_vel_noisy`. Using this velocity input, and `rospy`’s timing functions, a simple localization node is implemented which integrates the velocity over each discrete-time period to produce an estimate of the robot’s position. Note that `/cmd_vel_noisy` is the `/cmd_vel` topic with Gaussian noise added (due to the limited amount of space, odometry error does not significantly grow; the noise is added to simulate traveling overthe longer distances that a delivery robot would be required to traverse). To produce the simulated noise, run the node: 
+The first demonstration is to localize the robot without the benefit of any filtering of sensor data. This will provide a baseline capability against which the benefits of Kalman filtering can be assessed. To accomplish this task, a starter code has been provided in `localizer.py`, which subscribes to the topic `/cmd_vel_noisy`. Using this velocity input, and `rospy`’s timing functions, a simple localization node is implemented which integrates the velocity over each discrete-time period to produce an estimate of the robot’s position. Note that `/cmd_vel_noisy` is the `/cmd_vel` topic with Gaussian noise added (due to the limited amount of space, odometry error does not significantly grow; the noise is added to simulate traveling over the longer distances that a delivery robot would be required to traverse). To produce the simulated noise, run the node: 
+
 ```rosrun sessionX pub_noisy_vel.py```
 
 ## Task 3: Lidar Calibration
 Before implementing the Kalman filter, the laser sensor (lidar) needs to be calibrated. A script has been provided that returns the bearing θ of the CN Tower. Running the node
+
 ```rosrun sessionX get_scan_angle.py```
+
 publishes the angle to the topic `/scan_angle`. This script assumes that the laser-sensor reference frame is aligned with the robot’s reference frame. With real sensors, this is rarely the case. To calibrate the sensor, the robot is aligned with the CN Tower at a known angle and the measured bearing is checked. `get_scan_angle.py` is modified to account for the miscalibration of the laser sensor such that the node publishes the correct angle.
 
 ## Task 4: Extended Kalman Filter
