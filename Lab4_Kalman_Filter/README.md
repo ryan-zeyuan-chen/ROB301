@@ -5,7 +5,7 @@ The objective of this exercise is to acquire hands-on experience with Kalman fil
 * To implement an extended Kalman filter for one-dimensional localization
 * To test the filter on an idealized robotic mail-delivery task
 
-The intended route for your robot consists of four addresses (and corresponding co-ordinates) as given in the table below.
+The intended route for the robot consists of four addresses (and corresponding co-ordinates) as given in the table below.
 
 | Address | Coordinates [cm] |
 | :---: | :---: |
