@@ -8,7 +8,7 @@ The objective of this exercise is to acquire hands-on experience with Kalman fil
 The intended route for your robot consists of four addresses (and corresponding co-ordinates) as given in the table below.
 
 | Address | Coordinates [cm] |
-| --- | --- |
+| :---: | :---: |
 | 4 Bloor Street W | (61,0) |
 | 8 Bloor Street W | (122,0) |
 | 16 Bloor Street W | (244,0) |
