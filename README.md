@@ -7,4 +7,4 @@ This repository includes software for the following tasks:
 1. [Sensor & Actuator Programming](Lab1_Sensor_Actuator)
 2. [Pose-to-Pose Control](Lab2_Pose_to_Pose_Control)
 3. [Path Following with PID](Lab3_Path_Following)
-4. [Extended Kalman Filter](Lab4_Kalman_Filter)
+4. [Extended Kalman Filtering](Lab4_Kalman_Filter)
