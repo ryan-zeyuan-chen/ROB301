@@ -27,9 +27,6 @@ def publisher_node():
     publisher.publish(twist)
     correction = 0
     desired = 320
-    integral = 0
-    derivative = 0
-    lasterror = 0
     kp = 0.003
     i = 0
     address = [0.61,1.22,2.44,3.05]
