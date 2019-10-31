@@ -15,7 +15,7 @@ The intended route for the robot consists of four addresses (and corresponding c
 | 20 Bloor Street W | (305,0) |
 
 ## Task 1: Line-Following Control
-To begin, apply the line-following control (from Lab 3): Ensure that the robot can smoothly follow the designated line provided in the test course.
+To begin, the line-following control (from Lab 3) is applied. This ensures that the robot can smoothly follow the designated line provided in the test course.
 
 ## Task 2: Unfiltered Localization 
 The first demonstration is to localize the robot without the benefit of any filtering of sensor data. This will provide a baseline capability against which the benefits of Kalman filtering can be assessed. To accomplish this task, a starter code has been provided in `localizer.py`, which subscribes to the topic `/cmd_vel_noisy`. Using this velocity input, and `rospy`’s timing functions, a simple localization node is implemented which integrates the velocity over each discrete-time period to produce an estimate of the robot’s position. Note that `/cmd_vel_noisy` is the `/cmd_vel` topic with Gaussian noise added (due to the limited amount of space, odometry error does not significantly grow; the noise is added to simulate traveling overthe longer distances that a delivery robot would be required to traverse). To produce the simulated noise, run the node: 
