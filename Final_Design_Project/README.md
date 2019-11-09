@@ -8,3 +8,18 @@ The robot is required to deliver mail on a closed-loop path to any one of severa
 
 ## Software Setup
 The following commands should be run in separate terminal windows sequentially to start the ROS program properly:
+```$roscore``` [Remote PC]
+
+```$roslaunch turtlebot3_bringup turtlebot3_robot.launch``` [TurtleBot]
+
+```$roslaunch turtlebot3_bringup turtlebot3_rpicamera.launch``` [TurtleBot]
+
+The robot’s camera is to be used as a color sensor both to distinguish the different color patches and to detect the path marked with tape. To run the node, SSH into the Turtlebot, and run:
+```$rosrun turtlebot3_bringup camera.py``` [TurtleBot]
+
+It will output two values, one being a line sensor (through the topic `/line_idx`), which outputs the index with the least light intensity in the camera image array (corresponding to the location of the black tape), and the other being an RGB value, indicating the mean pixel intensity in the current image (published via the topic `/mean_img_rgb`).
+
+Lastly, run the script for the project by entering the following command in a terminal:
+```$roslaunch sessionX final_project.py``` [Remote PC]
+
+## Map
