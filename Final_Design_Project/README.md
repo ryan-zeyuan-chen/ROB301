@@ -27,7 +27,10 @@ Lastly, run the script for the project by entering the following command in a te
 ## Map
 The map for the mail route will be as shown in Figure 1. A colored rectangular patch indicates the location of an office. The offices, of which there are 11, are uniquely numbered (from 2 to 12) but there are only four colors (blue, green, yellow, orange); the same color can therefore indicate different offices. The color patches are connected by black tape, which can be used to guide the robot on the route. Note, however, that the spacing of offices will not necessarily be uniform. 
 
+<p align="center">
 <img src="Sample_Topological_Map.png"/>
+  Figure 1. Sample Topological Map
+</p>
 
 ## Requirements 
 It is helpful to subdivide the controller design into various subsystems which are responsible for different tasks, in particular:
