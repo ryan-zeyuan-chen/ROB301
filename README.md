@@ -8,3 +8,5 @@ This repository includes software for the following tasks:
 2. [Pose-to-Pose Control](Lab2_Pose_to_Pose_Control)
 3. [Path Following with PID](Lab3_Path_Following)
 4. [Extended Kalman Filtering](Lab4_Kalman_Filter)
+
+This repository also includes all software and documentation for the [Final Design Project](Final_Design_Project) of the course.
