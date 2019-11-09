@@ -40,4 +40,4 @@ It is helpful to subdivide the controller design into various subsystems which a
 * Localizing the robot based on some model of the robot, sensor, and a map of the environment
 * Navigating and moving to the desired offices
 
-The robot is to mimic delivery of a parcel of mail by stopping at the desired office, rotating 90<sup>◦</sup>to the left, pausing and then rotating back to continue.
+The robot is to mimic delivery of a parcel of mail by stopping at the desired office, rotating 90<sup>◦</sup> to the left, pausing and then rotating back to continue.
