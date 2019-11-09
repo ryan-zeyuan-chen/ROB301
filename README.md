@@ -9,4 +9,4 @@ This repository includes software for the following tasks:
 3. [Path Following with PID](Lab3_Path_Following)
 4. [Extended Kalman Filtering](Lab4_Kalman_Filter)
 
-This repository also includes all software and documentation for the [Final Design Project](Final_Design_Project) of the course.
+This repository also includes all software and documentation for the [Final Design Project](Final_Design_Project) of the course, which is to design and test a control system that enables a Turtlebot 3 Waffle Pi robot to simulate mail delivery.
