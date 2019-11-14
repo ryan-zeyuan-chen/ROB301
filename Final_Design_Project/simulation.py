@@ -11,7 +11,7 @@ predict = []
 update = []
 action = [[1,4],[1,3],[1,2],[1,1],[1,0],[1,2],[1,1],[1,2],[0,4],[1,3],[1,2],[1,1]]
 current = []
-map = [3,2,1,4,4,2,1,4,3,2,1]
+clr = [3,2,1,4,4,2,1,4,3,2,1]
 
 # Initialize
 for k in range(0,11):
@@ -35,7 +35,7 @@ for x in range(0,11):
         predict[x][k] = predict[x][k] + state[1][action[x][0]+1] * current[k]
         predict[x][k] = predict[x][k] + state[2][action[x][0]+1] * current[idx]
         for j in range(0,4):
-            if map[k] == j+1:
+            if clr[k] == j+1:
                 sum = sum + measure[action[x][1]][j] * predict[x][k]
                 update[x][k] = measure[action[x][1]][j] * predict[x][k]
     for k in range(0,11):
