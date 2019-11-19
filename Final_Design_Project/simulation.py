@@ -16,6 +16,7 @@ clr = np.array([3,2,1,4,4,2,1,4,3,2,1])
 # Initialize
 for k in range(0,11):
     current[k] = float(1/11)
+initial = current
 
 # Localization
 for x in range(0,11):
@@ -24,9 +25,8 @@ for x in range(0,11):
             idx = 0
         else:
             idx = k + 1
-        predict[x][k] = predict[x][k] + state[0][action[x][0]+1] * current[k-1]
-        predict[x][k] = predict[x][k] + state[1][action[x][0]+1] * current[k]
-        predict[x][k] = predict[x][k] + state[2][action[x][0]+1] * current[idx]
+        predict[x][k] = state[0][action[x][0]+1] * current[idx] + state[1][action[x][0]+1] * current[k] + state[2][action[x][0]+1] * current[k-1]
+    for k in range(0,11):
         update[x][k] = measure[action[x][1]][clr[k]-1] * predict[x][k]
     update[x] = update[x]/sum(update[x])
     current = update[x]
@@ -36,27 +36,29 @@ for x in range(0,11):
 x = np.array([2,3,4,5,6,7,8,9,10,11,12])
 y = update
 plt.subplot(6,1,1)
-plt.bar(x,y[0])
+plt.bar(x,initial)
 plt.subplot(6,1,2)
-plt.bar(x,y[1])
+plt.bar(x,y[0])
 plt.subplot(6,1,3)
-plt.bar(x,y[2])
+plt.bar(x,y[1])
 plt.subplot(6,1,4)
-plt.bar(x,y[3])
+plt.bar(x,y[2])
 plt.subplot(6,1,5)
-plt.bar(x,y[4])
+plt.bar(x,y[3])
 plt.subplot(6,1,6)
-plt.bar(x,y[5])
+plt.bar(x,y[4])
 plt.show()
 
-plt.subplot(5,1,1)
+plt.subplot(6,1,1)
+plt.bar(x,y[5])
+plt.subplot(6,1,2)
 plt.bar(x,y[6])
-plt.subplot(5,1,2)
+plt.subplot(6,1,3)
 plt.bar(x,y[7])
-plt.subplot(5,1,3)
+plt.subplot(6,1,4)
 plt.bar(x,y[8])
-plt.subplot(5,1,4)
+plt.subplot(6,1,5)
 plt.bar(x,y[9])
-plt.subplot(5,1,5)
+plt.subplot(6,1,6)
 plt.bar(x,y[10])
 plt.show()
