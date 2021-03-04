@@ -1,7 +1,7 @@
 # introduction-to-robotics
 
 A collection of software developed for the Turtlebot 3 Waffle Pi through the course ROB301 - Introduction to Robotics.
-Programs written in C and developed through the Robot Operating System (ROS).
+Programs written in Python and developed through the Robot Operating System (ROS).
 
 This repository includes software for the following tasks:
 1. [Sensor & Actuator Programming](Lab1_Sensor_Actuator)
